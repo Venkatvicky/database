@@ -3,6 +3,9 @@ vault:
   replicas: 1
   serviceType: LoadBalancer
   storagePath: /vault/data
+  ingress:
+    enabled: true
+    host: vault.cloudmasa.app
 
 postgres:
   image: postgres:15
@@ -12,3 +15,6 @@ postgres:
   username: vault_user
   password: vault_password
   database: vault_db
+  ingress:
+    enabled: true
+    host: postgres.cloudmasa.app
