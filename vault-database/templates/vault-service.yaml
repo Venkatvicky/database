@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: vault
 spec:
-  type: {{ .Values.vault.serviceType }}
+  type: LoadBalancer
   ports:
   - port: 8200
     targetPort: 8200
